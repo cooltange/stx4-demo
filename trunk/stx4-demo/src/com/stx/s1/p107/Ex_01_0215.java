@@ -55,6 +55,7 @@ public class Ex_01_0215 {
 		}
 
 		return day;
+		
 	}
 
 }
