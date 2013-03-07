@@ -8,16 +8,18 @@ import java.util.Arrays;
  * @author getan
  * 
  */
-public class P151 {
+public class P151
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 
 		TestParameters param = new TestParameters();
 		// 不变
 		String s = "";
 
 		int n = 0;
-		
+
 		// 变
 		StringBuffer buffer = new StringBuffer("");
 
@@ -26,15 +28,16 @@ public class P151 {
 		strings[0] = "";
 
 		int[] numbers = new int[] { 0 };
-		
+
 		// 不变
-		System.out.println(s);
-		System.out.println(n);
-		
+
+		System.out.println("String类型 : " + s);
+		System.out.println("Int类型 : " + n);
+
 		// 变
-		System.out.println(buffer);
-		System.out.println(Arrays.toString(strings));
-		System.out.println(Arrays.toString(numbers));
+		System.out.println("StringBuffer类型 : " + buffer);
+		System.out.println("String[] 类型 : " + Arrays.toString(strings));
+		System.out.println("int[] 类型 : " + Arrays.toString(numbers));
 
 		param.increase(n);
 		param.increase(numbers);
@@ -45,35 +48,41 @@ public class P151 {
 		System.out.println("------------分割线--------------");
 
 		// 不变
-		System.out.println(n);
-		System.out.println(s);
+		System.out.println("Int类型 : "+n);
+		System.out.println("String类型 : "+s);
 		// 变
-		System.out.println(buffer);
-		System.out.println(Arrays.toString(strings));
-		System.out.println(Arrays.toString(numbers));
+		System.out.println("StringBuffer类型 : " + buffer);
+		System.out.println("String[] 类型 : " + Arrays.toString(strings));
+		System.out.println("int[] 类型 : " +(Arrays.toString(numbers)));
 	}
 
 }
 
-class TestParameters {
+class TestParameters
+{
 
-	public void increase(int n) {
+	public void increase(int n)
+	{
 		n++;
 	}
 
-	public void increase(int[] nums) {
+	public void increase(int[] nums)
+	{
 		nums[0]++;
 	}
 
-	public void append(String s) {
+	public void append(String s)
+	{
 		s += 1;
 	}
 
-	public void append(StringBuffer s) {
+	public void append(StringBuffer s)
+	{
 		s.append(1);
 	}
 
-	public void append(String[] strings) {
+	public void append(String[] strings)
+	{
 		strings[0] += 1;
 	}
 
