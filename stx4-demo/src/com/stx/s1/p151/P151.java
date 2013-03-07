@@ -13,8 +13,8 @@ public class P151
 
 	public static void main(String[] args)
 	{
-
 		TestParameters param = new TestParameters();
+		
 		// 不变
 		String s = "";
 
@@ -30,9 +30,8 @@ public class P151
 		int[] numbers = new int[] { 0 };
 
 		// 不变
-
+		System.out.println("int类型 : " + n);
 		System.out.println("String类型 : " + s);
-		System.out.println("Int类型 : " + n);
 
 		// 变
 		System.out.println("StringBuffer类型 : " + buffer);
@@ -48,7 +47,7 @@ public class P151
 		System.out.println("------------分割线--------------");
 
 		// 不变
-		System.out.println("Int类型 : "+n);
+		System.out.println("int类型 : "+n);
 		System.out.println("String类型 : "+s);
 		// 变
 		System.out.println("StringBuffer类型 : " + buffer);
