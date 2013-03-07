@@ -13,24 +13,28 @@ public class P151 {
 	public static void main(String[] args) {
 
 		TestParameters param = new TestParameters();
-
+		// 不变
 		String s = "";
 
+		int n = 0;
+		
+		// 变
 		StringBuffer buffer = new StringBuffer("");
 
 		String[] strings = new String[1];
 
 		strings[0] = "";
 
-		int n = 0;
-
 		int[] numbers = new int[] { 0 };
-
-		System.out.println(n);
-		System.out.println(Arrays.toString(numbers));
+		
+		// 不变
 		System.out.println(s);
+		System.out.println(n);
+		
+		// 变
 		System.out.println(buffer);
 		System.out.println(Arrays.toString(strings));
+		System.out.println(Arrays.toString(numbers));
 
 		param.increase(n);
 		param.increase(numbers);
@@ -40,12 +44,13 @@ public class P151 {
 
 		System.out.println("------------分割线--------------");
 
+		// 不变
 		System.out.println(n);
-		System.out.println(Arrays.toString(numbers));
 		System.out.println(s);
+		// 变
 		System.out.println(buffer);
 		System.out.println(Arrays.toString(strings));
-
+		System.out.println(Arrays.toString(numbers));
 	}
 
 }
