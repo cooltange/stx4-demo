@@ -22,14 +22,14 @@ class Person {
 public class PersonRun {
 	public static void main(String[] args) {
 		// Person类已经初始化了，则eyeNum变量起作用了，输出0
-		System.out.println("Person的eyeNum类Field值:" + Person.eyeNum);
+		System.out.println("Person的eyeNum类变量值:" + Person.eyeNum);
 		
 		// 创建Person对象 p1
 		Person p1 = new Person();
 		
 		// 通过Person对象的引用p1来访问Person对象name实例变量
 		// 直接通过类访问eyeNum类变量
-		System.out.println("p1变量的name 变量值是：" + p1.name + "; Person类的eyeNum Field值是：" + Person.eyeNum); 
+		System.out.println("p1变量的name 变量值是：" + p1.name + "; Person类的eyeNum 变量值是：" + Person.eyeNum); 
 		
 		// 直接为name实例变量赋值
 		p1.name = "孙悟空";
@@ -37,7 +37,7 @@ public class PersonRun {
 		Person.eyeNum = 2;
 		
 		// 再次通过Person对象来访问name实例变量和eyeNum类变量
-		System.out.println("p1变量的name 变量值是：" + p1.name + "; Person类的eyeNum 变量值是：" + Person.eyeNum);
+		System.out.println("p1变量的name 变量值是：" + p1.name + "; p1的eyeNum 变量值是：" + p1.eyeNum);
 		
 		// 前面通过p修改了Person的eyeNum，此处的Person.eyeNum将输出2
 		System.out.println("Person的eyeNum类变量值:" + Person.eyeNum);
