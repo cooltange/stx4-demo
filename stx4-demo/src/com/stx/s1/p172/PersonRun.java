@@ -11,6 +11,12 @@ class Person {
 	public String name;
 	// 定义一个静态变量(类变量)
 	public static int eyeNum;
+	
+	public static int getEyeNum(){
+		
+		return eyeNum;
+		
+	}
 }
 
 /**
@@ -36,7 +42,7 @@ public class PersonRun {
 		// 通过p访问eyeNum类变量，依然是访问Person的eyeNum类变量
 		Person.eyeNum = 2;
 		
-		// 再次通过Person对象来访问name实例变量和eyeNum类变量
+		// 再次通过p1对象来访问name实例变量和eyeNum类变量
 		System.out.println("p1变量的name 变量值是：" + p1.name + "; p1的eyeNum 变量值是：" + p1.eyeNum);
 		
 		// 前面通过p修改了Person的eyeNum，此处的Person.eyeNum将输出2
@@ -47,5 +53,6 @@ public class PersonRun {
 		
 		// p2访问的eyeNum类变量依然引用Person类的，因此依然输出2
 		System.out.println("p2对象的eyeNum类变量值:" + p2.eyeNum); // 通过对象亦可访问类变量
+	
 	}
 }
