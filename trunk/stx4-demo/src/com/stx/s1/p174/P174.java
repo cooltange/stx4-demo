@@ -23,7 +23,7 @@ class Calculation {
 	}
 
 	public String add(String str1, String str2) {
-		return str1.concat(str2);
+		return str1.concat(str2); // 类似 str1 + str2
 	}
 
 	public int add(int i1, int i2) {
