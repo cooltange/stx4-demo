@@ -21,5 +21,13 @@ public class Car {
 	public int getSpeed() {
 		return speed;
 	}
+	
+	/**
+	 * 启动汽车
+	 */
+	public void run(){
+		// 实例方法中调用其他实例方法
+		boost();
+	}
 
 }
