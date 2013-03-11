@@ -14,6 +14,10 @@ public class CarRun {
 		// 通过车类创建一个车的对象
 		Car car1 = new Car();
 		
+		// 通过对象的引用调用对象的实例方法
+		// 启动
+		car1.run();
+		
 		// 加速
 		car1.boost();
 		
