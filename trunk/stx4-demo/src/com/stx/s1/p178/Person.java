@@ -1,6 +1,6 @@
 package com.stx.s1.p178;
 
-class Person {
+public class Person {
 	// 实例变量
 	private String name;
 
@@ -66,12 +66,12 @@ class Person {
 	 * 
 	 */
 	public void say() {
-
+		System.out.println("-------------");
 		System.out.println("您好,我是" + name);
-
+		System.out.println("-------------");
 	}
 
-	// 实例代码块
+	//实例代码块
 	{
 		System.out.println("实例代码块被执行!");
 	}
@@ -79,6 +79,7 @@ class Person {
 	// 静态代码块
 	static {
 		System.out.println("静态代码块被执行!");
+		System.out.println("-------------");
 	}
 
 }
