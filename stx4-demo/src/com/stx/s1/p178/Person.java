@@ -71,7 +71,7 @@ public class Person {
 		System.out.println("-------------");
 	}
 
-	//实例代码块
+	// 实例代码块
 	{
 		System.out.println("实例代码块被执行!");
 	}
