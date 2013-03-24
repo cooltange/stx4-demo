@@ -33,10 +33,10 @@ public class JdbcUtil {
 			// 加载数据库源的配置文件
 			ptes.load(JdbcUtil.class.getResourceAsStream("/jdbc.properties"));
 
-			driver = ptes.getProperty("driver");
-			url = ptes.getProperty("url");
-			username = ptes.getProperty("username");
-			password = ptes.getProperty("password");
+			driver = ptes.getProperty("jdbc.driver");
+			url = ptes.getProperty("jdbc.url");
+			username = ptes.getProperty("jdbc.username");
+			password = ptes.getProperty("jdbc.password");
 
 			Class.forName(driver);
 		} catch (IOException e) {
