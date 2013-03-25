@@ -36,6 +36,7 @@ public class P319JdbcDemo {
 			System.out.println(rs.getString("uname"));// 列名
 		}
 
+		// 5.关闭资源
 		rs.close();
 		stmt.close();
 		con.close();
