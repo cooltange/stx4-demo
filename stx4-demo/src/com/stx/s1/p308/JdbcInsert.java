@@ -34,8 +34,12 @@ public class JdbcInsert {
 			e.printStackTrace();
 		} finally {
 			try {
-				stmt.close();
-				connection.close();
+				if (stmt != null) {
+					stmt.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
