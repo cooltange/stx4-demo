@@ -36,7 +36,7 @@ public class P319JdbcDemo {
 			System.out.println(rs.getString("uname"));// 列名
 		}
 
-		// 5.关闭资源
+		// 5.关闭资源(释放资源的顺序与创建资源的顺序相反)
 		rs.close();
 		stmt.close();
 		con.close();
