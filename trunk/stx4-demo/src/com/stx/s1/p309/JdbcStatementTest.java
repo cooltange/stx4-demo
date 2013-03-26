@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 /**
  * Statement 示例类<BR>
- * 一个Statement对象 可以处理多个数据库操作
+ * 一个Statement对象 可以执行多个sql语句
  * 
  * @author getan
  * 
