@@ -1,4 +1,4 @@
-package com.stx.s1.p309;
+package com.stx.s1.p308;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,12 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * JDBC演示类 (更新功能)
+ * JDBC演示类 (新增功能)
  * 
  * @author getan
  * 
  */
-public class JdbcUpdate {
+public class JdbcInsert {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -27,8 +27,7 @@ public class JdbcUpdate {
 					"jdbc:oracle:thin:@localhost:1521:orcl", "stx", "stx");
 			stmt = connection.createStatement();
 
-			String sql = "update tbl_student set sname='王小五' where sno='3'";
-			// 执行更新操作
+			String sql = "insert into tbl_student values('11','王老五','42')";
 			count = stmt.executeUpdate(sql);
 
 		} catch (SQLException e) {
@@ -41,7 +40,7 @@ public class JdbcUpdate {
 				e.printStackTrace();
 			}
 
-			// 输出更新操作的行计数(受影响的数据记录条数)
+			// 输出新增操作的行计数(受影响的数据记录条数)
 			System.out.printf("共影响记录:%d条。\n", count);
 		}
 

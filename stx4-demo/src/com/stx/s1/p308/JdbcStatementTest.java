@@ -1,4 +1,4 @@
-package com.stx.s1.p309;
+package com.stx.s1.p308;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
