@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * jdbc示例
+ * jdbc示例(未捕获异常)
  * 
  * @author stx4
  * 

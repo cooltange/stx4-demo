@@ -46,15 +46,23 @@ public class JdbcStatementTest {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
+			// 关闭资源
 			try {
-				rsCourse.close();
-				rsStudent.close();
-				stmt.close();
-				connection.close();
+				if (rsCourse != null) {
+					rsCourse.close();
+				}
+				if (rsStudent != null) {
+					rsStudent.close();
+				}
+				if (stmt != null) {
+					stmt.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-
 		}
 	}
 }
