@@ -3,30 +3,35 @@ package com.stx.demo.entity;
 import java.util.Date;
 
 /**
+ * 博客文章 实体类
+ * 
  * 
  * @author yaofu
  * 
  */
 public class Blogger {
-	private int bl_id;
 	// 博文ID
-	private int us_id;
+	private int bl_id;
 	// 用户ID
-	private String bl_title;
+	private int us_id;
 	// 博文标题
-	private String bl_content;
+	private String bl_title;
 	// 博文内容
-	private int ca_id;
+	private String bl_content;
 	// 分类ID
-	private String bl_levels;
+	private int ca_id;
+
 	// 公开程度A=公开，M=自已可见，H=好友可见
-	private String bl_readable;
+	private String bl_levels;
+
 	// 是否可评论 Y/N
-	private Date bl_createtime;
+	private String bl_readable;
+
 	// 创建时间
-	private String bl_delflag;
+	private Date bl_createtime;
 
 	// 是否删除标志 Y/N
+	private String bl_delflag;
 
 	public int getBlogId() {
 		return bl_id;
