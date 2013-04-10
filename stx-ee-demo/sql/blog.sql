@@ -34,4 +34,5 @@ insert into tbl_user values(seq_us.nextval, '张三', '神马的空间', '123456
 
 /*博文初始数据*/
 insert into tbl_blogger values(seq_bl.nextval, 1, '第一个博文', '我的第一个博文的内容', null, null, null, sysdate, null);
+insert into tbl_blogger values(seq_bl.nextval, 2, '第二个博文', '我的第二个博文的内容', null, null, null, sysdate, null);
 

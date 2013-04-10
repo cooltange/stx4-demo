@@ -4,21 +4,22 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>stx-ee-demo</display-name>
+	
 	<welcome-file-list>
-		<welcome-file>jsp/index_guide.jsp</welcome-file>
+		<welcome-file>jsp/index.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<!-- 查询博文的Servlet类 -->
 	<servlet>
-		<description>添加查询博文的Servlet类</description>
-		<display-name>BloggerQueryServlet</display-name>
-		<servlet-name>BloggerQueryServlet</servlet-name>
-		<servlet-class>com.stx.demo.severlet.BloggerQueryServlet</servlet-class>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>com.stx.demo.servlet.BlogHomeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>BloggerQueryServlet</servlet-name>
-		<url-pattern>/bloggerQuery</url-pattern>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 
-	<!-- h2 内存数据库控制台-->
+	<!-- h2 内存数据库控制台 -->
 	<servlet>
 		<servlet-name>H2Console</servlet-name>
 		<servlet-class>org.h2.server.web.WebServlet</servlet-class>
