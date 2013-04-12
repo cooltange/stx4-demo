@@ -13,6 +13,8 @@ import com.stx.demo.util.JdbcUtil;
  * 
  * @author getan
  * 
+ * @createDate 2013-4-12
+ * 
  */
 public class BloggerDao {
 
@@ -24,7 +26,7 @@ public class BloggerDao {
 
 		// 查询出最新更新的十条博文信息
 		String sql = "Select u.US_ID, u.US_BLOGNAME, b.*\n"
-				+ "  From tbl_user u, tbl_blogger b\n"
+				+ "  From tbl_demo_user u, tbl_demo_blogger b\n"
 				+ " Where u.US_ID = b.US_ID\n" + "   And (RowNum <= 10)\n"
 				+ " Order By b.bl_createtime Desc";
 
@@ -65,7 +67,7 @@ public class BloggerDao {
 
 		// 释放数据库连接资源
 		JdbcUtil.release();
-		
+
 		// 返回用户信息列表对象(给servlet)
 		return bloggerList;
 	}

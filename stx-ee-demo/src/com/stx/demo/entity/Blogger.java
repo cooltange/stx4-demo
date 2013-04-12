@@ -5,8 +5,9 @@ import java.util.Date;
 /**
  * 博客文章 实体类
  * 
- * 
  * @author yaofu
+ * 
+ * @createDate 2013-1-12
  * 
  */
 public class Blogger {
