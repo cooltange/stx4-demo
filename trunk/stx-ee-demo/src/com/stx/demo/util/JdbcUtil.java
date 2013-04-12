@@ -15,6 +15,8 @@ import java.util.Properties;
  * 
  * @author getan
  * 
+ * @createDate 2013-1-12
+ * 
  */
 public class JdbcUtil {
 

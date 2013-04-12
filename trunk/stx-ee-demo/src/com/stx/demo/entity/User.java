@@ -2,10 +2,14 @@ package com.stx.demo.entity;
 
 import java.util.Date;
 
-/*
- * 用户实体类（用以封装用户信息）
+/**
+ * 博客用户 实体类
  * 
- * */
+ * @author yaofu
+ * 
+ * @createDate 2013-1-12
+ * 
+ */
 public class User {
 	// 用户编号
 	private int us_id;

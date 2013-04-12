@@ -17,6 +17,8 @@ import com.stx.demo.entity.Blogger;
  * 博客首页 Servlet类
  * 
  * @author getan
+ * 
+ * @createDate 2013-4-12
  *
  */
 public class BlogHomeServlet extends HttpServlet {
