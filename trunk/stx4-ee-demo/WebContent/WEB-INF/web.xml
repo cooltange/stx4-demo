@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>stx4-ee-demo</display-name>
+  <welcome-file-list>
+    <welcome-file>jsp/login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.user.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CheckLoginNameServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.user.CheckLoginNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckLoginNameServlet</servlet-name>
+    <url-pattern>/checkLoginName</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StudentQueryServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.student.StudentQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentQueryServlet</servlet-name>
+    <url-pattern>/studentQuery</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StudentAddServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.student.StudentAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentAddServlet</servlet-name>
+    <url-pattern>/studentAdd</url-pattern>
+  </servlet-mapping>
+</web-app>
