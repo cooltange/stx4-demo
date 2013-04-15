@@ -5,8 +5,6 @@
 	<title>stx4-ee演示登录页</title>
 	<link href="<%=request.getContextPath()%>/bootstrap/2.1.1/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
 	<link href="<%=request.getContextPath()%>/css/default.css" type="text/css" rel="stylesheet" /> 
-	<!-- 引入javascript验证框架的js库文件 -->
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/validate.js"></script>
 </head>
 
 <body>
@@ -47,7 +45,5 @@
 			</form>
 		</div>
 	</div>
-<!-- 引入验证规则及处理方法的js,该文件必须位于待验证表单后,建议放置在</body>前一行(仅使用validatejs框架时适用) -->
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/user/login.js"></script>
 </body>
 </html>
