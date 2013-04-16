@@ -67,7 +67,7 @@ public class StudentDao {
 		Connection con = JdbcUtil.getConnection();
 		// 通过connection对象获得"预编译语句"对象
 		PreparedStatement ps = con
-				.prepareStatement("insert into student values(?,?,?,?)");
+				.prepareStatement("insert into student(sno,sname,sage,ssex) values(?,?,?,?)");
 
 		// 设置"预编译语句"对象中的参数(从1开始计数)
 		ps.setString(1, student.getSno());
