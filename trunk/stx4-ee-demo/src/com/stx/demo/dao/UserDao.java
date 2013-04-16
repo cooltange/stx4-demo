@@ -69,7 +69,7 @@ public class UserDao {
 		Statement ps = con.createStatement();
 		
 		// 执行查询获得结果集对象
-		ResultSet rs = ps.executeQuery("select * from stxuser where loginname = '"
+		ResultSet rs = ps.executeQuery("select usid,loginname,uname from stxuser where loginname = '"
 						+ loginName + 
 						"' and password = '" + password + "'");
 
