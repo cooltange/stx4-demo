@@ -3,6 +3,7 @@ package com.stx.demo.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.List;
 
 import com.stx.demo.entity.User;
@@ -64,15 +65,13 @@ public class UserDao {
 		// 获取connection对象
 		Connection con = JdbcUtil.getConnection();
 		
-		// 通过connection对象获得"预编译语句"对象
-		PreparedStatement ps = con.prepareStatement("select * from stxuser where loginname = ? and password = ?");
-
-		// 设置"预编译语句"对象中的参数(从1开始计数)
-		ps.setString(1, loginName);
-		ps.setString(2, password);
+		// 通过connection对象获得语句对象
+		Statement ps = con.createStatement();
 		
 		// 执行查询获得结果集对象
-		ResultSet rs = ps.executeQuery();
+		ResultSet rs = ps.executeQuery("select * from stxuser where loginname = '"
+						+ loginName + 
+						"' and password = '" + password + "'");
 
 		// 声明用户对象
 		User user = null;
