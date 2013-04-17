@@ -18,7 +18,7 @@ import com.stx.demo.util.JdbcUtil;
  */
 public class BloggerDao {
 
-	public ArrayList<Blogger> queryBlogger(Blogger blogger) throws Exception {
+	public ArrayList<Blogger> queryBlogger() throws Exception {
 		// 获取connection对象
 		Connection con = JdbcUtil.getConnection();
 		// 创建语句对象
@@ -56,12 +56,14 @@ public class BloggerDao {
 				content = contents;
 			}
 
+			// 将每个字段的值赋给实体对象中对应的属性
 			bloggers.setContent(content);
 			bloggers.setCatId(rs.getInt("ca_id"));
 			bloggers.setLevel(rs.getString("bl_levels"));
 			bloggers.setReadable(rs.getString("bl_readable"));
 			bloggers.setCreateTime(rs.getTimestamp("bl_createtime"));
 
+			// 将该博文对象放入博文列表对象中
 			bloggerList.add(bloggers);
 		}
 
