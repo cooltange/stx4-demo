@@ -65,11 +65,11 @@
 				</ul>
 				<div class="hero-unit">
 					<%
-					ArrayList<Blogger> blogList = (ArrayList<Blogger>) request.getAttribute("bloggerList");
-					if (blogList != null) {
+					ArrayList<Blogger> bloggerList = (ArrayList<Blogger>) request.getAttribute("bloggerList");
+					if (bloggerList != null) {
 					%>
 					<%
-						for (Blogger blogger : blogList) {
+						for (Blogger blogger : bloggerList) {
 					%>
 					<div class="row well">
 						<div class="well">
