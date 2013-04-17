@@ -48,20 +48,11 @@ public class BlogHomeServlet extends HttpServlet {
 		// 设置请求编码集为utf-8(避免中文乱码)
 		request.setCharacterEncoding("utf-8");
 
-		// 创建博客类数据视图对象(用于封装博文信息的查询条件)
-		Blogger blogger = new Blogger();
-		HttpSession session = request.getSession();
-
-		// 不用从登陆客户得到，直接得到主页的信息
-
-		blogger.setTitle(request.getParameter("bl_title"));
-		blogger.setContent(request.getParameter("bl_content"));
-
 		// 调用dao中查询博文列表的方法，获得博文列表的集合
 		List<Blogger> bloggerList = null;
 
 		try {
-			bloggerList = dao.queryBlogger(blogger);
+			bloggerList = dao.queryBlogger();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
