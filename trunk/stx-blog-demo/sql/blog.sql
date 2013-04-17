@@ -30,7 +30,7 @@ create sequence seq_demo_us start with 1 increment by 1;
 create sequence seq_demo_bl start with 1 increment by 1;
 
 /*用户初始数据*/
-insert into tbl_demo_user values(seq_us.nextval, '张三', '神马的空间', '123456', null, null, sysdate, sysdate, null);
+insert into tbl_demo_user values(seq_demo_us.nextval, '张三', '神马的空间', '123456', null, null, sysdate, sysdate, null);
 
 /*博文初始数据*/
 insert into tbl_demo_blogger values(seq_demo_bl.nextval, 1, '第一个博文', '我的第一个博文的内容', null, null, null, sysdate, null);
