@@ -18,7 +18,7 @@ import com.stx.demo.util.JdbcUtil;
  */
 public class BloggerDao {
 
-	public ArrayList<Blogger> queryBlogger() throws Exception {
+	public ArrayList<Blogger> queryBloggerList() throws Exception {
 		// 获取connection对象
 		Connection con = JdbcUtil.getConnection();
 		// 创建语句对象

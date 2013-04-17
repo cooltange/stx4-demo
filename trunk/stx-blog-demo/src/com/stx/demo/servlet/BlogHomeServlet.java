@@ -52,7 +52,7 @@ public class BlogHomeServlet extends HttpServlet {
 		List<Blogger> bloggerList = null;
 
 		try {
-			bloggerList = dao.queryBlogger();
+			bloggerList = dao.queryBloggerList();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -64,7 +64,7 @@ public class BlogHomeServlet extends HttpServlet {
 		// 通过ServletContext对象获得的路径是 相对Web应用根的路径,即网站的绝对根路径.
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp/home.jsp");
 
-		// 请求转发给博客信息列表(/jsp/blogger/bloggerList.jsp)
+		// 请求转发给博客首页(/jsp/home.jsp)
 		rd.forward(request, response);
 
 	}
