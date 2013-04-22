@@ -48,4 +48,14 @@
     <error-code>500</error-code>
     <location>/common/500.html</location>
   </error-page>
+  <servlet>
+    <description></description>
+    <display-name>BloggerAddServlet</display-name>
+    <servlet-name>BloggerAddServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.BloggerAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BloggerAddServlet</servlet-name>
+    <url-pattern>/bloggerAdd</url-pattern>
+  </servlet-mapping>
 </web-app>
