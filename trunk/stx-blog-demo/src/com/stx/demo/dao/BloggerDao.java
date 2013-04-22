@@ -1,7 +1,9 @@
 package com.stx.demo.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -73,4 +75,29 @@ public class BloggerDao {
 		// 返回用户信息列表对象(给servlet)
 		return bloggerList;
 	}
+	
+	
+	/**
+	 * 新增博客文章
+	 * 
+	 * @param blogger
+	 * @throws SQLException 
+	 */
+	public void addBlogger(Blogger blogger) throws SQLException{
+		
+		// 获取connection对象
+		Connection con = JdbcUtil.getConnection();
+		
+		PreparedStatement ps = con.prepareStatement("insert into tbl_ft16_blogger(bid, usid, title, content, cid) values(seq_ft16_bgr.nextval, ?, ?, ?, ?);");
+		
+		ps.setInt(1, blogger.getUserId());
+		ps.setString(2, blogger.getTitle());
+		ps.setString(3, blogger.getContent());
+		ps.setInt(4, blogger.getCatId());
+		
+		ps.executeUpdate();
+		
+		JdbcUtil.release();
+	}
+	
 }
