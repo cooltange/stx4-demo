@@ -41,6 +41,8 @@ public class P42BufferedInputStream {
 			}
 		} finally {
 			// 保证最后可以关闭字节缓冲输入(出)流
+			fin.close();
+			fout.close();
 			bis.close();
 			bos.close();
 		}
