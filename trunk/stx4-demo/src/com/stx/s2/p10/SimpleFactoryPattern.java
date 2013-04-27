@@ -99,7 +99,7 @@ class OperationFactory {
 			break;
 		}
 		// TODO
-		
+
 		}
 
 		return oper;
