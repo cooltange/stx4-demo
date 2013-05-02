@@ -15,13 +15,13 @@ public class Manager {
 		// 创建出题人对象
 		QuestionMan qtman = new QuestionMan();
 		// 创建猜题人对象
-		GuessMan asMan = new GuessMan();
+		GuessMan gsMan = new GuessMan();
 
 		// 是否猜中
 		boolean isSame = false;
 		do {
 			// 判断数字是否被猜中
-			isSame = qtman.isSame(asMan.guessNum());
+			isSame = qtman.isSame(gsMan.guessNum());
 		} while (!isSame);// 猜中即结束循环，否则继续猜数字
 
 	}
