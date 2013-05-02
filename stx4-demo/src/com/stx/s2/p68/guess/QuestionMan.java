@@ -18,27 +18,19 @@ public class QuestionMan {
 	public QuestionMan() {
 		Random random = new Random();
 		// 产生随机数字
-		setQtNum(random.nextInt(100));
+		qtNum = random.nextInt(100);
 	}
 
 	public boolean isSame(int asNum) {
-		if (asNum > getQtNum()) {
+		if (asNum > qtNum) {
 			System.out.println("太大");
 			return false;
-		} else if (asNum < getQtNum()) {
+		} else if (asNum < qtNum) {
 			System.out.println("太小");
 			return false;
 		} else {
-			System.out.println("恭喜您，您猜对了，这个数就是" + getQtNum());
+			System.out.println("恭喜您，您猜对了，这个数就是" + qtNum);
 			return true;
 		}
-	}
-
-	public int getQtNum() {
-		return qtNum;
-	}
-
-	public void setQtNum(int qtNum) {
-		this.qtNum = qtNum;
 	}
 }
