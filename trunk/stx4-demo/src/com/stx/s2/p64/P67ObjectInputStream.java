@@ -14,7 +14,7 @@ public class P67ObjectInputStream {
 	public static void main(String[] args) {
 		ObjectInputStream ois = null;
 		try {
-			// 创建一个ObjectInputStream输出流
+			// 创建一个ObjectInputStream输入流
 			ois = new ObjectInputStream(new FileInputStream("d:\\object.txt"));
 			// 从输入流中读取一个Java对象，并将其强制类型转换为Person类
 			Person person = (Person) ois.readObject();
