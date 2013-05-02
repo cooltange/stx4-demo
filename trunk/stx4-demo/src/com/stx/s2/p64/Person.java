@@ -8,7 +8,7 @@ package com.stx.s2.p64;
  */
 public class Person implements java.io.Serializable {
 	/** serialVersionUID */
-	private static final long serialVersionUID = 6697951477123891119L;
+	private static final long serialVersionUID = -6771572682177059626L;
 
 	private String name;
 	private int age;
