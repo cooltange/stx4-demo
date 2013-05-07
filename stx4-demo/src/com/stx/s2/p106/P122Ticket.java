@@ -35,6 +35,7 @@ class SynchronizedTicket implements Runnable {// 实现Runnable接口方便多�
 	public void run() {
 		// 假设每个窗口排了50个购票人
 		for (int i = 1; i < 50; i++) {
+			// 使用同步块，保证每次售票操作只运行一个线程访问。
 			synchronized (lockObj) {
 				// 在有票的情况下才售票
 				if (ticket > 0) {
