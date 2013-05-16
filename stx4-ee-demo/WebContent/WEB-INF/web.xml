@@ -36,4 +36,14 @@
     <servlet-name>StudentAddServlet</servlet-name>
     <url-pattern>/studentAdd</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StuServlet</display-name>
+    <servlet-name>StuServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.StuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StuServlet</servlet-name>
+    <url-pattern>/getstus</url-pattern>
+  </servlet-mapping>
 </web-app>
