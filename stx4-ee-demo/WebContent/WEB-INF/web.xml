@@ -46,4 +46,14 @@
     <servlet-name>StuServlet</servlet-name>
     <url-pattern>/getstus</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ELServlet</display-name>
+    <servlet-name>ELServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.ELServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ELServlet</servlet-name>
+    <url-pattern>/el</url-pattern>
+  </servlet-mapping>
 </web-app>
