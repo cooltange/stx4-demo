@@ -17,6 +17,7 @@ public class UserAction extends ActionSupport {
 				user.getLoginName(), user.getPassword());
 		
 		if (currentUser != null) {
+			// 将当前用户的对象存放到 session(会话)中
 			ActionContext context = ActionContext.getContext();
 			Map<String, Object> session = context.getSession();
 			session.put("currentUser", currentUser);
