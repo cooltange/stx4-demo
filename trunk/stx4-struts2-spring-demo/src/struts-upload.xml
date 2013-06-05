@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 文件上传模块 -->
+	<package name="upload" extends="struts-base">
+
+		<action name="imgUpload" class="uploadAction">
+			<result name="success">/jsp/upload/showImg.jsp</result>
+		</action>
+		
+	</package>
+</struts>

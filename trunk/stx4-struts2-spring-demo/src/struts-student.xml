@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 学生模块 -->
+	<package name="student" extends="struts-base">
+		<action name="addStudent" class="studentAction" method="add">
+			<result name="success">/jsp/student/studentAdd.jsp</result>
+		</action>
+		<action name="queryStudent" class="studentAction" method="query">
+			<result name="success">/jsp/student/studentListJSTL.jsp</result>
+		</action>
+		<action name="queryStudentPage" class="studentAction" method="queryPage">
+			<result name="success">/jsp/student/studentPageList.jsp</result>
+		</action>
+		<action name="delStudent" class="studentAction" method="del">
+			<result name="success" type="redirectAction">queryStudent</result>
+		</action>
+		<action name="delStudents" class="studentAction" method="dels">
+			<result name="success" type="redirectAction">queryStudent</result>
+		</action>
+	</package>
+</struts>

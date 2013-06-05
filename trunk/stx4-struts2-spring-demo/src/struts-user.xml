@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 用户模块 -->
+	<package name="user" extends="struts-base">
+		<!-- UserAction的对象不再由struts2框架创建,改为被spring所管理 -->
+		<action name="login" class="userAction" method="login">
+			<result name="success">/jsp/indexJSTL.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+		
+		<action name="checkLoginName" class="userAction" method="login">
+		</action>
+	</package>
+</struts>
