@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<!-- 定义UserAction的Bean(原型Bean) -->
+	<bean id="userAction" class="com.stx.demo.action.UserAction" scope="prototype">
+		<!-- 依赖注入UserService接口的实现类的对象 -->
+		<property name="service" ref="userServiceImpl"/>
+	</bean>
+	
+	<!-- 定义UserService接口的实现类的Bean -->
+	<bean id="userServiceImpl" class="com.stx.demo.service.impl.UserServiceImpl">
+		<!-- 依赖注入StudentDao接口的实现类的对象 -->
+		<property name="dao" ref="userDaoImpl"/>
+	</bean>
+	
+	<!-- 定义UserDao接口的实现类的Bean(单例Bean) -->
+   	<bean id="userDaoImpl" class="com.stx.demo.dao.impl.UserDaoImpl">
+   		<!-- 依赖注入jdbcTemplate的对象 -->
+   		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+   	</bean>
+	
+	<!-- 定义StudentAction的Bean -->
+	<bean id="studentAction" class="com.stx.demo.action.StudentAction" scope="prototype">
+		<!-- 依赖注入StudentService接口的实现类的对象 -->
+		<property name="service" ref="studentServiceImpl"/>
+	</bean>
+	
+	<!-- 定义StudentService接口的实现类的Bean -->
+	<bean id="studentServiceImpl" class="com.stx.demo.service.impl.StudentServiceImpl">
+		<!-- 依赖注入StudentDao接口的实现类的对象 -->
+		<property name="dao" ref="studentDaoImpl"/>
+	</bean>
+	
+	<!-- 定义StudentDao接口的实现类的Bean -->
+   	<bean id="studentDaoImpl" class="com.stx.demo.dao.impl.StudentDaoImpl">
+   		<!-- 依赖注入jdbcTemplate的对象 -->
+   		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+   	</bean>
+   
+	<!-- 定义UploadAction的Bean -->
+	<bean id="uploadAction" class="com.stx.demo.action.UploadAction" scope="prototype">
+	</bean>
+</beans>

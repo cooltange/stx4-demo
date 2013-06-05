@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+/*分页样式*/
+.pager {
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	FONT-SIZE: 80%;
+	PADDING-BOTTOM: 3px;
+	MARGIN: 3px;
+	COLOR: #ff6500;
+	PADDING-TOP: 3px;
+	TEXT-ALIGN: center;
+	font-size: 12px;
+}
+
+.pager A {
+	BORDER-RIGHT: #ff9600 1px solid;
+	PADDING-RIGHT: 7px;
+	BACKGROUND-POSITION: 50% bottom;
+	BORDER-TOP: #ff9600 1px solid;
+	PADDING-LEFT: 7px;
+	PADDING-BOTTOM: 5px;
+	BORDER-LEFT: #ff9600 1px solid;
+	COLOR: #ff6500;
+	MARGIN-RIGHT: 3px;
+	PADDING-TOP: 5px;
+	BORDER-BOTTOM: #ff9600 1px solid;
+	TEXT-DECORATION: none
+}
+
+.pager A:hover {
+	BORDER-RIGHT: #ff9600 1px solid;
+	BORDER-TOP: #ff9600 1px solid;
+	BACKGROUND-IMAGE: none;
+	BORDER-LEFT: #ff9600 1px solid;
+	COLOR: #ff6500;
+	BORDER-BOTTOM: #ff9600 1px solid;
+	BACKGROUND-COLOR: #ffc794
+}
+
+.pager A:active {
+	BORDER-RIGHT: #ff9600 1px solid;
+	BORDER-TOP: #ff9600 1px solid;
+	BACKGROUND-IMAGE: none;
+	BORDER-LEFT: #ff9600 1px solid;
+	COLOR: #ff6500;
+	BORDER-BOTTOM: #ff9600 1px solid;
+	BACKGROUND-COLOR: #ffc794
+}
+
+.pager SPAN.current {
+	float:none;
+	BORDER-RIGHT: #ff6500 1px solid;
+	PADDING-RIGHT: 7px;
+	BORDER-TOP: #ff6500 1px solid;
+	PADDING-LEFT: 7px;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 5px;
+	BORDER-LEFT: #ff6500 1px solid;
+	COLOR: #ff6500;
+	MARGIN-RIGHT: 3px;
+	PADDING-TOP: 5px;
+	BORDER-BOTTOM: #ff6500 1px solid;
+	BACKGROUND-COLOR: #ffbe94
+}
+
+.pager SPAN.count {
+	float:none;
+	PADDING-RIGHT: 7px;
+	BACKGROUND-POSITION: 50% bottom;
+	PADDING-LEFT: 7px;
+	PADDING-BOTTOM: 5px;
+	COLOR: #ff6500;
+	MARGIN-RIGHT: 3px;
+	PADDING-TOP: 5px;
+	TEXT-DECORATION: none
+}
