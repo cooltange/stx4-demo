@@ -8,7 +8,7 @@
   
   <body>
      <form action="imgUpload.action" method="post" enctype="multipart/form-data">
-        图像文件<input type="file" name="img"/><BR>
+        图像文件<input type="file" name="img"/>(大小小于2M)<BR>
         <input type="submit" value="上传"/>
      </form>
   </body>
